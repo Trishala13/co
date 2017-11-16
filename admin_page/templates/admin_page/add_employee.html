@@ -1,0 +1,47 @@
+{%extends 'admin_page/base.html' %}
+    {%block content%}
+                    <form name="form01" action="add_employee_form" method="post">
+                       {%csrf_token%}
+                        <label for="fname" style="width:420px;margin-top:2%;">Employee ID* : </label>
+                            <span><input type="text" id="firstname" name="eid" placeholder="Emp Id.." style="margin-top:1%;" ></span>
+                       &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+      			<label for="lname" style="width:120px;margin-top:2%;">Name  : </label>
+                            <span><input type="text" id="lastname" name="name" placeholder="Emp name.." style="margin-top:1%;"></span>
+                        <br/>
+                        
+                        <label for="aadhar" style="width:120px;margin-top:2%;">Aadhar No.* : </label>
+                            <span><input type="text" id="aadhar" name="aadhar" placeholder="Emp Aadhar Number.." style="margin-top:1%;"></span>
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+                        
+			<label for="address" style="width:120px;margin-top:2%;">Designation* : </label>
+                           <span><input type="text" id="address" name="designation" placeholder="Designation" style="margin-top:1%;"></span>
+                        <br/>
+			
+			<label for="address" style="width:120px;margin-top:2%;">Class* : </label>
+                           <span><input type="text" id="address" name="class" placeholder="class" style="margin-top:1%;"></span>
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+			<label for="Phone" style="width:120px;margin-top:2%;">Phone* : </label>
+                           <span><input type="text" id="phone" name="phone" placeholder="Emp Phone Number.." style="margin-top:1%;"></span>
+                        <br/>
+
+			<label for="address" style="width:120px;margin-top:2%;">Address* : </label>
+                           <span><input type="text" id="address" name="address" placeholder="Emp Address" style="margin-top:1%;"></span>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+			<label for="Phone" style="width:120px;margin-top:2%;">Zone ID* : </label>
+                           <span><input type="text" id="phone" name="zid" placeholder="Zone Id" style="margin-top:1%;"></span>
+                        <br/>
+
+			<label for="address" style="width:120px;margin-top:2%;">Division ID* : </label>
+                           <span><input type="text" id="address" name="did" placeholder="Division Id" style="margin-top:1%;"></span>
+                        &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp
+
+			<label for="password" style="width:120px;margin-top:2%;">Password* : </label>
+                            <span><input type="password" id="password" name="password" placeholder="Your password" style="margin-top:1%;"></span><br/>
+
+                        <label for="email" style="width:120px;margin-top:2%;">E-mail* : </label>
+                           <span><input type="text" id="email" name="email" placeholder="Your email" style="margin-top:1%;"></span><br/>
+                        <div class="message" style="color:red;text-align:center;margin-top:1.5%;margin-bottom:-1.5%;">{{message}}</div>
+                        <input type="submit" value="Add" style="margin-top:3%;">
+                    </form>
+               {%endblock%}

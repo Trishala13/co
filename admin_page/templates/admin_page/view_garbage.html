@@ -1,0 +1,21 @@
+{%extends 'admin_page/base.html' %}
+    {%block content%}
+                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-indigo" style="margin-top: 2%;margin-left: 12%;"><i class="fa fa-pencil-square-o"></i>Back To Admin Page</button>
+                <table>
+  <tr>
+    <th>Division ID</th>
+    <th>Vehicle ID</th>
+      <th>Number Of Trips</th>
+      <th>Date </th>
+      <th>Amount Collected</th>
+  </tr>
+{% for garbage in garbage_list%}
+  <tr>
+	{%for x in garbage%}
+<td>{{x}}</td>
+    {%endfor%}
+  </tr>
+   {%endfor%}     
+</table>
+    
+{%endblock%}

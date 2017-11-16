@@ -1,0 +1,20 @@
+{%extends 'employee/base1.html' %}
+{%load staticfiles %}
+
+{%block content%}
+                    
+                    <form action="admin_login_fill" style="position: relative;top: 75px;" method="post">
+{%csrf_token%}
+                        <div id="lab"><label for="mail">Admin Username</label>
+                            <input type="text" id="mail" name="mail" placeholder="Your Admin Username">
+                        </div>
+                        
+                        <div id="lab"><label for="password">Password</label>
+                            <input type="password" id="pass" name="password" placeholder="Your password">
+                        </div>
+                        <div class="message" style="color:red;text-align:center;margin-top:1.5%;margin-bottom:-1.5%;">{{message}}</div>
+                        <input type="submit" value="Sign-Up">
+                    </form>
+<img src="{% static 'images/symbol.jpg' %}" style="position: relative;top: -500px;left: 570px; height: 150px;width: 150px;z-index=-1;">
+{%endblock%}
+

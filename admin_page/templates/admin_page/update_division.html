@@ -1,0 +1,25 @@
+{%extends 'admin_page/base.html' %}
+    {%block content%}
+                    <form name="form01" action="update_division_form" method="get">
+                       {%csrf_token%}
+                        <div id="lab"><label for="fname">Division ID* : </label>
+                            <span><input type="text" id="firstname" name="division" placeholder="Division Id.." style="margin-top:1%;"></span>
+                        </div>
+     
+                        <div id="lab"><label for="aadhar">Area* : </label>
+                            <span><input type="text" id="aadhar" name="area" placeholder="Area.." style="margin-top:1%;"></span>
+                        </div>
+                        
+			<div id="lab"><label for="address">Number of Cans* : </label>
+                           <span><input type="text" id="address" name="can" placeholder="Num of Cans.." style="margin-top:1%;"></span>
+                        </div>
+
+			<div id="lab"><label for="address">Number of Garbage Dumps* : </label>
+                        <span><input type="text" id="address" name="num" placeholder="Num of garbage Dumps.." style="margin-top:1%;"></span>
+                        </div>
+
+			<div class="message" style="color:red;text-align:center;margin-top:1.5%;margin-bottom:-1.5%;">{{message}}</div>
+
+                        <input type="submit" value="Update" style="margin-top:3%;">
+                    </form>
+               {%endblock%}
