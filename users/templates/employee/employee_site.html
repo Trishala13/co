@@ -1,0 +1,29 @@
+{%extends 'users/base.html' %}
+    {%block content%}
+                    <a href="garbage_form"><button class="w3-button w3-indigo" style="margin-top: 2%;margin-left: 47%;"> <i class="fa fa-pencil-square-o"></i>Garbage Report Entry</button>    </a>
+           
+<table>
+  <tr>
+    <th>Complaint ID</th>
+    <th>Department</th>
+      <th>Detail</th>
+    <th>User_id</th>
+      <th>Division</th>
+      <th>Date</th>
+      <th>Status</th>
+      <th>Action</th>
+  </tr>
+{% for id,dept,detail,status,i_id,division,date,buttons,val in complaint_list%}
+  <tr>
+	<td>{{id}}</td><td>{{dept}}</td><td>{{detail}}</td><td>{{i_id}}</td><td>{{division}}</td><td>{{date}}</td><td>{{status}}</td>
+	{%if buttons %}
+		<td><a href={{buttons}}><button>{{val}}</button></a></td>
+	{%else %}
+		<td>No Action</td>
+	{%endif%}
+	
+  </tr>
+   {%endfor%}    
+</table>
+    
+{%endblock%}
